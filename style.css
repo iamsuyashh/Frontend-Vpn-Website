@@ -18,6 +18,54 @@ header{
     padding: 30px 75px;
     font-family: 'Encode Sans SC', sans-serif;
 }
+/* Navbar Styles */
+header {
+    /* ...existing styles... */
+  }
+  
+  .left li a {
+    /* ...existing styles... */
+    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  .left li a:hover {
+    color: #F53855; /* Change text color on hover */
+  }
+  
+  /* Add a hover effect for the navbar button */
+  .dtn:hover {
+    background: #F53855;
+    color: #ffffff;
+  }
+  
+  /* Add a hover effect for the menu toggle button */
+  .menu-toggle:hover {
+    background-color: #F53855;
+    color: #ffffff;
+  }
+  
+  /* Add hover effect for the responsive menu links */
+  .responsive-menu ul li a:hover {
+    color: #F53855;
+  }
+  
+
+/* Initially hide the responsive menu */
+.responsive-menu {
+    display: none;
+  }
+  
+  /* Show the responsive menu on small screens */
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .responsive-menu.active {
+      display: block;
+    }
+  }
+  
 
  img:hover{
     cursor: pointer;
@@ -421,18 +469,50 @@ padding: 20px 20px;
 
 
 
-  /* mediaquieries */
-  @media (max-width: 1045px) {
-    .wrapper .box{
-      width: calc(50% - 10px);
-      margin: 10px 0;
+  /* Default styles */
+
+/* ...existing styles... */
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    /* Navbar */
+    header {
+      padding: 20px 40px; /* Adjust padding for smaller screens */
+    }
+  
+    .left li a {
+      padding: 10px 15px; /* Adjust padding for smaller screens */
+    }
+  
+    /* Hero section */
+    .herosection {
+      grid-template-columns: 1fr; /* Stack columns in the hero section for smaller screens */
+    }
+  
+    .leftcol {
+      padding-left: 20px; /* Adjust padding for smaller screens */
+    }
+  
+    .heroimg img {
+      margin-top: 50px; /* Adjust margin for smaller screens */
+    }
+  
+    /* Feature section */
+    .featuresection {
+      grid-template-columns: 1fr; /* Stack columns in the feature section for smaller screens */
+    }
+  
+    /* Testimonials section */
+    .testomonial {
+      margin-top: 50px; /* Adjust margin for smaller screens */
+    }
+  
+    /* Footer */
+    .imgfooter {
+      padding-top: 20px; /* Adjust padding for smaller screens */
     }
   }
-  @media (max-width: 702px) {
-    .wrapper .box{
-      width: 100%;
-    }
-  }
+  
 
 
 
