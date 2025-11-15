@@ -2,404 +2,593 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaslesVpn | Home</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LaslesVpn</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <style>
+    /* small inline styles to ensure UI looks okay without your CSS file */
+    header { display:flex; align-items:center; justify-content:space-between; padding:16px; background:#fff; box-shadow:0 1px 6px rgba(0,0,0,0.05); }
+    header .left { display:flex; gap:18px; align-items:center; }
+    header .left img { height:40px; }
+    header .nav-links a { margin-right:12px; color:#333; text-decoration:none; }
+    .dtn { padding:8px 14px; border-radius:6px; background:#ff4d4f; color:#fff; text-decoration:none; }
+    .auth-card { max-width:720px; margin:36px auto; border-radius:10px; }
+    .small { min-height:1.2em; display:block; }
+    /* Make the show/hide button match input height nicely */
+    .input-group .btn-toggle-pass { min-width:64px; }
+  </style>
 </head>
 
 <body>
 
-    <section id="about">
-        <header>
-            <div class="image" data-aos="fade-right">
-                <img src="img/logo.png" alt="lol">
-            </div>
-
-            <nav class="left" data-aos="fade-down">
-                <ul>
-                    <li>
-                        <a href="#about">About</a>
-                        <a href="#features">Features</a>
-                        <a href="#pricing">Pricing</a>
-                        <a href="#testimonial">Testimonials</a>
-                        <a href="#help">Help</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="button" data-aos="fade-left">
-                <a href="#signup" class="dtn">Sign Up</a>
-            </div>
-
-        </header>
-    </section>
-
-
-    <!-- Herooooo sectioononono -->
-
-
-    <div class="herosection" data-aos="zoom-in">
-        <div class="leftcol">
-            <h1>Want anything to be <br> easy with LaslesVPN.</h1>
-            <p>Provide a network for all your needs with ease and fun using LaslesVPN <br> discover interesting features
-                from us.</p>
-            <a href="#" class="herobtn">Get Started</a>
+  <section id="about">
+    <header>
+      <div class="left" data-aos="fade-right">
+        <div class="image">
+          <img src="img/logo.png" alt="logo">
         </div>
-        <div class="heroimg">
-            <img src="img/img1.png" alt="lol">
-        </div>
+        <nav class="nav-links" data-aos="fade-down">
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#testimonial">Testimonials</a>
+          <a href="#help">Help</a>
+        </nav>
+      </div>
+
+      <div class="right" data-aos="fade-left">
+        <!-- Added IDs referenced by the script -->
+        <a href="#signup" id="login-nav-btn" class="btn btn-link">Sign In</a>
+        <a href="#signup" id="signup-nav-btn" class="dtn ms-2">Sign Up</a>
+        <button id="logout-btn" class="btn btn-outline-secondary ms-2" style="display:none;">Logout</button>
+      </div>
+    </header>
+  </section>
+
+  <!-- Hero -->
+  <div class="herosection" data-aos="zoom-in">
+    <div class="leftcol">
+      <h1>Want anything to be <br> easy with LaslesVPN.</h1>
+      <p>Provide a network for all your needs with ease and fun using LaslesVPN <br> discover interesting features from
+        us.</p>
+      <a href="#" class="herobtn">Get Started</a>
+    </div>
+    <div class="heroimg">
+      <img src="img/img1.png" alt="hero">
+    </div>
+  </div>
+
+  <div class="heroimgfooter" data-aos="flip-left">
+    <img src="img/img2.png" alt="img2">
+  </div>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="featuresection">
+      <div class="leftcol" data-aos="slide-left">
+        <img src="img/feimg.png" alt="">
+      </div>
+      <div class="rightcol" data-aos="slide-right">
+        <h1>We Provide Many <br> Features You Can Use</h1>
+        <p>You can explore the features that we provide with fun and <br> have their own functions each feature.</p>
+        <ul>
+          <li> <img src="img/ftick.png"> Powerfull online protection.</li>
+          <li> <img src="img/ftick.png">Internet without borders.</li>
+          <li> <img src="img/ftick.png">Supercharged VPN</li>
+          <li> <img src="img/ftick.png">No specific time limits.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing">
+    <div class="heading">
+      <h1>Choose Your Plan</h1>
+      <p>Let's choose the package that is best for you and explore it happily and cheerfully.</p>
     </div>
 
+    <div class="pricecards" data-aos="flip-right">
+      <div class="cards">
+        <img src="img/price.png" alt="">
+        <h1>Free Plan</h1>
+        <ul>
+          <li>Unlimited Bandwitch</li>
+          <li>Encrypted Connection</li>
+          <li>No Traffic Logs</li>
+          <li>Works on All Devices</li>
+        </ul>
+        <div class="ptn1">
+          <a href="#" class="dtn">Select</a>
+        </div>
+      </div>
 
-    <!-- Herooo imageee -->
+      <div class="cards">
+        <img src="img/price.png" alt="">
+        <h1>Standard Plan</h1>
+        <ul>
+          <li>Unlimited Bandwitch</li>
+          <li>Encrypted Connection</li>
+          <li>Yes Traffic Logs</li>
+          <li>Works on All Devices</li>
+          <li>Connect Anyware</li>
+        </ul>
+        <div class="ptn">
+          <a href="#" class="dtn">Select</a>
+        </div>
+      </div>
 
-    <div class="heroimgfooter" data-aos="flip-left" >
-        <img src="img/img2.png" alt="">
+      <div class="cards">
+        <img src="img/price.png" alt="">
+        <h1>Premium Plan</h1>
+        <ul>
+          <li>Unlimited Bandwitch</li>
+          <li>Encrypted Connection</li>
+          <li>No Traffic Logs</li>
+          <li>Works on All Devices</li>
+          <li>Connect Anyware</li>
+          <li>Get New Features</li>
+        </ul>
+        <div class="ltn">
+          <a href="#" class="dtn">Select</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonial">
+    <div class="testomonial">
+      <div class="testheading">
+        <h1>Huge Global Network </h1>
+        <h2>of Fast VPN</h2>
+        <p>See LaslesVPN everywhere to make it easier for you when you move locations.</p>
+      </div>
+
+      <div class="testimg" data-aos="fade">
+        <img src="img/img3.png" alt="img3">
+      </div>
+
+      <div class="customer">
+        <ul>
+          <li>
+            <a href="https://www.netflix.com/">
+              <img src="img/netflix.png" alt="">
+            </a>
+            <a href="https://www.reddit.com/">
+              <img src="img/reddit.png" alt="">
+            </a>
+            <a href="https://www.amazon.in/">
+              <img src="img/amazon.png" alt="">
+            </a>
+            <a href="https://discord.com/">
+              <img src="img/discord.png" alt="">
+            </a>
+            <a href="https://www.spotify.com/us/">
+              <img src="img/spotify.png" alt="">
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
 
-    <!-- featuresssss -->
+    <div class="secondhead">
+      <h1>Trusted by Thousands of Happy Customer</h1>
+      <p>These are the stories of our customers who have joined us with great pleasure.</p>
+    </div>
 
-
-    <section id="features">
-        <div class="featuresection">
-            <div class="leftcol" data-aos="slide-left">
-                <img src="img/feimg.png" alt="">
+    <div class="wrapper" data-aos="fade-down">
+      <div class="box">
+        <i class="fas fa-quote-left quote"></i>
+        <p>“It turned out to be more than my expectations and so far there have been no problems."</p>
+        <div class="content">
+          <div class="info">
+            <div class="name">Viezh Robert</div>
+            <div class="job">Designer | Developer</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
             </div>
-            <div class="rightcol" data-aos="slide-right">
-                <h1>We Provide Many <br> Features You Can Use</h1>
-                <p>You can explore the features that we provide with fun and <br> have their own functions each feature.
-                </p>
-                <ul>
-                    <li> <img src="img/ftick.png"> Powerfull online protection.</li>
-                    <li> <img src="img/ftick.png">Internet without borders.</li>
-                    <li> <img src="img/ftick.png">Supercharged VPN</li>
-                    <li> <img src="img/ftick.png">No specific time limits.</li>
-                </ul>
-            </div>
+          </div>
+          <div class="image">
+            <img src="img/test1.png" alt="">
+          </div>
         </div>
-    </section>
-
-
-    <!-- Pricinggjwdjdf -->
-
-    <section id="pricing">
-        <div class="heading">
-            <h1>Choose Your Plan</h1>
-            <p>Let's choose the package that is best for you and explore it happily and cheerfully.</p>
+      </div>
+      <div class="box">
+        <i class="fas fa-quote-left quote"></i>
+        <p>“I am very happy to use this VPN,I like it because I like to travel far and still can connect with high speed.”.</p>
+        <div class="content">
+          <div class="info">
+            <div class="name">Yessica Christy</div>
+            <div class="job">YouTuber | Blogger</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+          </div>
+          <div class="image">
+            <img src="img/test2.png" alt="">
+          </div>
         </div>
-
-        <div class="pricecards" data-aos="flip-right">
-            <div class="cards">
-                <img src="img/price.png" alt="">
-                <h1>Free Plan</h1>
-                <ul>
-                    <li>Unlimited Bandwitch</li>
-                    <li>Encrypted Connection</li>
-                    <li>No Traffic Logs</li>
-                    <li>Works on All Devices</li>
-                </ul>
-
-                <h3>
-                    <!-- Free -->
-                </h3>
-                <div class="ptn1">
-                    <a href="#" class="dtn">Select</a>
-                </div>
+      </div>
+      <div class="box">
+        <i class="fas fa-quote-left  quote"></i>
+        <p>“Very unusual for my business that currently requires a virtual private network that has high security.”</p>
+        <div class="content">
+          <div class="info">
+            <div class="name">Kim Young Jou</div>
+            <div class="job">Freelancer | Advertiser</div>
+            <div class="stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
             </div>
-
-            <div class="cards">
-                <img src="img/price.png" alt="">
-                <h1>Standard Plan</h1>
-                <ul>
-                    <li>Unlimited Bandwitch</li>
-                    <li>Encrypted Connection</li>
-                    <li>Yes Traffic Logs</li>
-                    <li>Works on All Devices</li>
-                    <li>Connect Anyware</li>
-                </ul>
-                <h4>
-                    <!-- $9 / mo -->
-                </h4>
-
-                <div class="ptn">
-                    <a href="#" class="dtn">Select</a>
-                </div>
-            </div>
-
-            <div class="cards">
-                <img src="img/price.png" alt="">
-                <h1>Premium Plan</h1>
-                <ul>
-                    <li>Unlimited Bandwitch</li>
-                    <li>Encrypted Connection</li>
-                    <li>No Traffic Logs</li>
-                    <li>Works on All Devices</li>
-                    <li>Connect Anyware</li>
-                    <li>Get New Features</li>
-                </ul>
-                <!-- <h5>
-                    $12 / mo
-                </h5> -->
-                <div class="ltn">
-                    <a href="#" class="dtn">Select</a>
-                </div>
-
-            </div>
+          </div>
+          <div class="image">
+            <img src="img/test3.png" alt="">
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
+  <hr class="line">
 
+  <!-- Unified Auth Card Section -->
+  <section id="signup" class="py-5">
+    <div class="container">
+      <div class="col-12">
+        <div class="card auth-card p-3">
+          <div class="d-flex justify-content-center mb-3">
+            <button id="tab-login" class="btn btn-sm me-2 btn-outline-secondary active">Sign In</button>
+            <button id="tab-signup" class="btn btn-sm btn-outline-secondary">Create Account</button>
+          </div>
 
-    <!-- Testimonials -->
-    <section id="testimonial">
-        <div class="testomonial">
-            <div class="testheading">
-                <h1>Huge Global Network </h1>
-                <h2>of Fast VPN</h2>
-                <p>See LaslesVPN everywhere to make it easier for you when you move locations.</p>
-            </div>
+          <div class="p-3">
+            <!-- Sign In -->
+            <form id="login-form" class="auth-form">
+              <h2 class="h5 mb-3">Sign In</h2>
+              <div class="mb-2">
+                <label for="login-email" class="form-label">Email address</label>
+                <input id="login-email" type="email" class="form-control" placeholder="name@example.com" required>
+              </div>
+              <div class="mb-2">
+                <label for="login-password" class="form-label">Password</label>
+                <div class="input-group">
+                  <input id="login-password" type="password" class="form-control" placeholder="Password" required>
+                  <button
+                    id="toggle-login-password"
+                    class="btn btn-outline-secondary btn-toggle-pass"
+                    type="button"
+                    aria-pressed="false"
+                    aria-label="Show password"
+                  >Show</button>
+                </div>
+              </div>
+              <div class="mb-3">
+                <button id="login-submit" class="w-100 btn btn-danger" type="submit">Sign in</button>
+              </div>
+              <div id="login-message" class="small"></div>
+            </form>
 
-            <div class="testimg" data-aos="fade">
-                <img src="img/img3.png ">
-            </div>
-
-            <div class="customer">
-                <ul>
-                    <li>
-                        <a href="https://www.netflix.com/">
-                            <img src="img/netflix.png" alt="">
-                        </a>
-                        <a href="https://www.reddit.com/">
-                            <img src="img/reddit.png" alt="">
-                        </a>
-                        <a href="https://www.amazon.in/">
-                            <img src="img/amazon.png" alt="">
-                        </a>
-                        <a href="https://discord.com/">
-                            <img src="img/discord.png" alt="">
-                        </a>
-                        <a href="https://www.spotify.com/us/">
-                            <img src="img/spotify.png" alt="">
-                        </a>
-                    </li>
-                </ul>
-            </div>
+            <!-- Sign Up -->
+            <form id="signup-form" class="auth-form d-none">
+              <h2 class="h5 mb-3">Create Account</h2>
+              <div class="mb-2">
+                <label for="signup-email" class="form-label">Email address</label>
+                <input id="signup-email" type="email" class="form-control" placeholder="you@example.com" required>
+              </div>
+              <div class="mb-2">
+                <label for="signup-password" class="form-label">Password</label>
+                <div class="input-group">
+                  <input id="signup-password" type="password" class="form-control" placeholder="Password" required>
+                  <button
+                    id="toggle-signup-password"
+                    class="btn btn-outline-secondary btn-toggle-pass"
+                    type="button"
+                    aria-pressed="false"
+                    aria-label="Show password"
+                  >Show</button>
+                </div>
+              </div>
+              <div class="mb-3">
+                <button id="signup-submit" class="w-100 btn btn-outline-primary" type="submit">Sign up</button>
+              </div>
+              <div id="signup-message" class="small"></div>
+            </form>
+          </div>
         </div>
+      </div>
+    </div>
+  </section>
 
-        <div class="secondhead">
-            <h1>
-                Trusted by Thousands of Happy Customer
-            </h1>
-            <p>
-                These are the stories of our customers who have joined us with great pleasure.
-            </p>
+  <!-- Footer -->
+  <section id="help">
+    <footer class="bd-footer py-5 mt-5 bg-light">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-lg-3 mb-3">
+            <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/" aria-label="Bootstrap">
+              <span class="fs-5"><img src="img/logo.png" alt=""></span>
+            </a>
+            <ul class="list-unstyled small text-muted">
+              <li class="mb-2">LaslesVPN is a private virtual network that has unique features and has high security.
+                <div class="imgfooter">
+                  <a href="https://www.facebook.com/">
+                    <img src="img/fb.png" alt="">
+                  </a>
+                  <a href="https://twitter.com/?lang=en">
+                    <img src="img/Twitter.png" alt="">
+                  </a>
+                  <a href="https://www.instagram.com/">
+                    <img src="img/Instagram.png" alt="">
+                  </a>
+                </div>
+              </li>
+              <li class="mb-2">&copy 2020LaslesVPN</li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+            <h5>Product</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="/">Download </a></li>
+              <li class="mb-2"><a href="">Pricing</a></li>
+              <li class="mb-2"><a href="">Locations</a></li>
+              <li class="mb-2"><a href="">Server</a></li>
+              <li class="mb-2"><a href="">Countries</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Engage</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="">LaslesVPN ? </a></li>
+              <li class="mb-2"><a href="">FAQ</a></li>
+              <li class="mb-2"><a href="">About Us</a></li>
+              <li class="mb-2"><a href="">Terms of Service</a></li>
+              <li class="mb-2"><a href="">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-lg-2 mb-3">
+            <h5>Earn money</h5>
+            <ul class="list-unstyled ">
+              <li class="mb-2"><a href="">Affiliate</a></li>
+              <li class="mb-2"><a href="">Become Partner</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </footer>
+  </section>
 
+  <!-- AOS + Auth script -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
+  <script>
+    AOS.init({
+      offset: 300,
+      duration: 1000,
+      easing: 'ease'
+    });
 
-        <div class="wrapper" data-aos="fade-down">
-            <div class="box">
-                <i class="fas fa-quote-left quote"></i>
-                <p>“It turned out to be more than my expectations and so far there
-                    have been no problems."</p>
-                <div class="content">
-                    <div class="info">
-                        <div class="name">Viezh Robert</div>
-                        <div class="job">Designer | Developer</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="image">
-                        <img src="img/test1.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <i class="fas fa-quote-left quote"></i>
-                <p>“I am very happy to use this VPN,I like it because I like to travel far and still can connect
-                    with high speed.”.</p>
-                <div class="content">
-                    <div class="info">
-                        <div class="name">Yessica Christy</div>
-                        <div class="job">YouTuber | Blogger</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="image">
-                        <img src="img/test2.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="box">
-                <i class="fas fa-quote-left  quote"></i>
-                <p>“Very unusual for my business that currently requires a virtual private network that has high
-                    security.”</p>
-                <div class="content">
-                    <div class="info">
-                        <div class="name">Kim Young Jou</div>
-                        <div class="job">Freelancer | Advertiser</div>
-                        <div class="stars">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="image">
-                        <img src="img/test3.png" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
+    document.addEventListener('DOMContentLoaded', () => {
+      const signupForm = document.getElementById('signup-form');
+      const loginForm = document.getElementById('login-form');
+      const signupMessage = document.getElementById('signup-message');
+      const loginMessage = document.getElementById('login-message');
 
+      // Toggle buttons inside the card
+      const tabLogin = document.getElementById('tab-login');
+      const tabSignup = document.getElementById('tab-signup');
 
-    </section>
+      // Nav/logout buttons
+      const signupNavBtn = document.getElementById('signup-nav-btn');
+      const loginNavBtn = document.getElementById('login-nav-btn');
+      const logoutBtn = document.getElementById('logout-btn');
 
-    <hr class="line">
+      // Password toggle buttons + fields
+      const toggleLoginPassBtn = document.getElementById('toggle-login-password');
+      const toggleSignupPassBtn = document.getElementById('toggle-signup-password');
+      const loginPasswordInput = document.getElementById('login-password');
+      const signupPasswordInput = document.getElementById('signup-password');
 
+      const SERVER_URL = 'http://localhost:5000'; // change as needed
 
+      // Toggle view function
+      function showForm(which) {
+        if (which === 'login') {
+          if (loginForm) loginForm.classList.remove('d-none');
+          if (signupForm) signupForm.classList.add('d-none');
+          tabLogin.classList.add('active');
+          tabSignup.classList.remove('active');
+        } else {
+          if (signupForm) signupForm.classList.remove('d-none');
+          if (loginForm) loginForm.classList.add('d-none');
+          tabSignup.classList.add('active');
+          tabLogin.classList.remove('active');
+        }
+        // clear messages
+        if (signupMessage) signupMessage.textContent = '';
+        if (loginMessage) loginMessage.textContent = '';
+      }
 
+      // Wire toggle buttons (defensive checks)
+      if (tabLogin) tabLogin.addEventListener('click', () => showForm('login'));
+      if (tabSignup) tabSignup.addEventListener('click', () => showForm('signup'));
 
-    <section id="signup">
+      // Header nav buttons open auth card and switch view
+      if (signupNavBtn) signupNavBtn.addEventListener('click', (e) => { e.preventDefault(); showForm('signup'); location.hash = '#signup'; });
+      if (loginNavBtn) loginNavBtn.addEventListener('click', (e) => { e.preventDefault(); showForm('login'); location.hash = '#signup'; });
 
-        <body class="text-center" data-new-gr-c-s-check-loaded="14.1022.0" data-gr-ext-installed="">
+      // Password toggle handlers
+      function togglePasswordVisibility(inputEl, btnEl) {
+        if (!inputEl || !btnEl) return;
+        if (inputEl.type === 'password') {
+          inputEl.type = 'text';
+          btnEl.textContent = 'Hide';
+          btnEl.setAttribute('aria-pressed', 'true');
+          btnEl.setAttribute('aria-label', 'Hide password');
+        } else {
+          inputEl.type = 'password';
+          btnEl.textContent = 'Show';
+          btnEl.setAttribute('aria-pressed', 'false');
+          btnEl.setAttribute('aria-label', 'Show password');
+        }
+      }
 
-            <div class="form">
-                <main class="form-signin">
-                    <form>
-                        <img src="img/logo.png" class="mb-5 me-1">
-                        <h1 class="h3 mb-3 fw-normal">Sign In</h1>
+      if (toggleLoginPassBtn) {
+        toggleLoginPassBtn.addEventListener('click', () => togglePasswordVisibility(loginPasswordInput, toggleLoginPassBtn));
+      }
+      if (toggleSignupPassBtn) {
+        toggleSignupPassBtn.addEventListener('click', () => togglePasswordVisibility(signupPasswordInput, toggleSignupPassBtn));
+      }
 
-                        <div class="form-floating">
-                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                            <label for="floatingInput">Email address</label>
-                        </div>
-                        <div class="form-floating">
-                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                            <label for="floatingPassword">Password</label>
-                        </div>
+      // --- SIGNUP FORM ---
+      if (signupForm) {
+        signupForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if (signupMessage) signupMessage.textContent = '';
+          const email = document.getElementById('signup-email').value.trim();
+          const password = document.getElementById('signup-password').value;
 
-                        <div class="checkbox mb-3">
-                            <label>
-                                <input type="checkbox" value="remember-me"> Remember me
-                            </label>
-                        </div>
-                        <button class="w-100 btn btn-lg btn-danger" type="submit">Sign in</button>
-                        <p class="mt-5 mb-3 text-muted">©2021</p>
-                    </form>
-            </div>
-            </main>
+          try {
+            const response = await fetch(`${SERVER_URL}/api/register`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, password }),
+            });
 
-        </body>
-    </section>
+            const data = await response.json().catch(() => ({}));
+            if (response.ok) {
+              if (signupMessage) {
+                signupMessage.textContent = 'Sign up successful! Please sign in.';
+                signupMessage.style.color = 'green';
+              }
+              signupForm.reset();
+              // Reset password button state to hidden (password type)
+              if (signupPasswordInput) signupPasswordInput.type = 'password';
+              if (toggleSignupPassBtn) { toggleSignupPassBtn.textContent = 'Show'; toggleSignupPassBtn.setAttribute('aria-pressed', 'false'); }
+              showForm('login');
+            } else {
+              if (signupMessage) {
+                signupMessage.textContent = data.msg || 'Sign up failed.';
+                signupMessage.style.color = 'red';
+              }
+            }
+          } catch (error) {
+            console.error('Signup error:', error);
+            if (signupMessage) {
+              signupMessage.textContent = 'An error occurred. Please try again.';
+              signupMessage.style.color = 'red';
+            }
+          }
+        });
+      }
 
+      // --- LOGIN FORM ---
+      if (loginForm) {
+        loginForm.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if (loginMessage) loginMessage.textContent = '';
+          const email = document.getElementById('login-email').value.trim();
+          const password = document.getElementById('login-password').value;
 
+          try {
+            const response = await fetch(`${SERVER_URL}/api/login`, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ email, password }),
+            });
 
+            const data = await response.json().catch(() => ({}));
+            // Expect backend to return { token: "..." } on success
+            if (response.ok && data && data.token) {
+              if (loginMessage) {
+                loginMessage.textContent = 'Login successful!';
+                loginMessage.style.color = 'green';
+              }
+              loginForm.reset();
+              // Reset password button state to hidden (password type)
+              if (loginPasswordInput) loginPasswordInput.type = 'password';
+              if (toggleLoginPassBtn) { toggleLoginPassBtn.textContent = 'Show'; toggleLoginPassBtn.setAttribute('aria-pressed', 'false'); }
+              saveToken(data.token);
+              updateUIForLoggedInState();
+            } else {
+              if (loginMessage) {
+                loginMessage.textContent = data.msg || 'Login failed.';
+                loginMessage.style.color = 'red';
+              }
+            }
+          } catch (error) {
+            console.error('Login error:', error);
+            if (loginMessage) {
+              loginMessage.textContent = 'An error occurred. Please try again.';
+              loginMessage.style.color = 'red';
+            }
+          }
+        });
+      }
 
-    <!-- fottttterr bootsrap -->
-    <section id="help">
-        <footer class="bd-footer py-5 mt-5 bg-light">
-            <footer>
-  <p>© 2025 SecureVPN | All rights reserved.</p>
-</footer>
+      // --- LOGOUT BUTTON ---
+      if (logoutBtn) {
+        logoutBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          logout();
+        });
+      }
 
-            <div class="container py-5">
-                <div class="row">
-                    <div class="col-lg-3 mb-3">
-                        <a class="d-inline-flex align-items-center mb-2 link-dark text-decoration-none" href="/"
-                            aria-label="Bootstrap">
-                            <span class="fs-5"><img src="img/logo.png" alt=""></span>
-                        </a>
-                        <ul class="list-unstyled small text-muted">
-                            <li class="mb-2">LaslesVPN is a private virtual network that has unique features and has
-                                high security.
-                                <div class="imgfooter">
-                                    <a href="https://www.facebook.com/">
-                                        <img src="img/fb.png" alt="">
-                                    </a>
-                                    <a href="https://twitter.com/?lang=en">
-                                        <img src="img/Twitter.png" alt="">
-                                    </a>
-                                    <a href="https://www.instagram.com/">
-                                        <img src="img/Instagram.png" alt="">
-                                    </a>
-                                </div>
+      // --- Helper Functions ---
+      function saveToken(token) {
+        localStorage.setItem('authToken', token);
+      }
+      function getToken() {
+        return localStorage.getItem('authToken');
+      }
+      function logout() {
+        localStorage.removeItem('authToken');
+        updateUIForLoggedOutState();
+        showForm('login');
+      }
+      function updateUIForLoggedInState() {
+        if (signupNavBtn) signupNavBtn.style.display = 'none';
+        if (loginNavBtn) loginNavBtn.style.display = 'none';
+        if (logoutBtn) logoutBtn.style.display = 'inline-block';
+      }
+      function updateUIForLoggedOutState() {
+        if (signupNavBtn) signupNavBtn.style.display = 'inline-block';
+        if (loginNavBtn) loginNavBtn.style.display = 'inline-block';
+        if (logoutBtn) logoutBtn.style.display = 'none';
+      }
 
-                            </li>
-                            <li class="mb-2">&copy 2020LaslesVPN</li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-lg-2 offset-lg-1 mb-3">
-                        <h5>Product</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="/">Download </a></li>
-                            <li class="mb-2"><a href="">Pricing</a></li>
-                            <li class="mb-2"><a href="">Locations</a></li>
-                            <li class="mb-2"><a href="">Server</a></li>
-                            <li class="mb-2"><a href="">Countries</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-lg-2 mb-3">
-                        <h5>Engage</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="">LaslesVPN ? </a></li>
-                            <li class="mb-2"><a href="">FAQ</a></li>
-                            <li class="mb-2"><a href="">About Us</a></li>
-                            <li class="mb-2"><a href="">Terms of Service</a></li>
-                            <li class="mb-2"><a href="">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-6 col-lg-2 mb-3">
-                        <h5>Earn money</h5>
-                        <ul class="list-unstyled ">
-                            <li class="mb-2"><a href="">Affiliate</a></li>
-                            <li class="mb-2"><a href="">Become Partner</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </footer>
+      // Initialize
+      if (getToken()) {
+        updateUIForLoggedInState();
+      } else {
+        updateUIForLoggedOutState();
+      }
+      showForm('login');
+    });
+  </script>
 
-
-    </section>
-
-
-<!-- aos -->
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({
-        offset: 300,
-        duration: 1000,
-        easing: 'ease'
-      });
-    </script>
-
-
-<!-- bootsttrap -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
+  <!-- bootstrap bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
